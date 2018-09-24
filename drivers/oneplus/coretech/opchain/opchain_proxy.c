@@ -77,3 +77,5 @@ module_param(boost, uint, 0644);
 module_param(boost_tl, uint, 0644);
 module_param(boost_sample_time, uint, 0644);
 module_param(chain_on, uint, 0644);
+
+MODULE_LICENSE("Dual BSD/GPL");
