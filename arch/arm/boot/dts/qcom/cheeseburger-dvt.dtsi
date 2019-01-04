@@ -72,6 +72,7 @@
 };
 
 
+//camera
 &soc {
 	tlmm: pinctrl@03400000 {
 		cam_sensor_rear_0_mclk_active: cam_sensor_rear_0_mclk_active {
@@ -409,6 +410,7 @@
 		status = "disabled";
 	};
 };
+
 &cci {
 	actuator0: qcom,actuator@0 {
 		cell-index = <0>;
