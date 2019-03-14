@@ -36,7 +36,9 @@
 #include <linux/power/oem_external_fg.h>
 #include <linux/atomic.h>
 #include <linux/param_rw.h>
+#ifdef OEM_DEBUG_SUPPORT
 #include <linux/oneplus/boot_mode.h>
+#endif
 
 #define CREATE_MASK(NUM_BITS, POS) \
 	((unsigned char) (((1 << (NUM_BITS)) - 1) << (POS)))
@@ -1031,8 +1033,10 @@ int qpnp_powerkey_state_check(struct qpnp_pon *pon,int up)
 {
 	int rc =0;
 
+#ifdef OEM_DEBUG_SUPPORT
 	if (get_boot_mode() !=	MSM_BOOT_MODE__NORMAL)
 		return 0;
+#endif
 
 	if ( up ) {
 		rc = atomic_read(&pon->press_count);

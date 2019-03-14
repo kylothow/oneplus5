@@ -1,8 +1,8 @@
 config OEM_DEBUG_SUPPORT
-        bool
-        default y
+	bool ""
+	default y
 
 config OEM_TRACE_SUPPORT
-	default y
+	bool ""
 	depends on OEM_DEBUG_SUPPORT
-	bool "OEM debug function, enable it will register the device, which under /dev/otracer."
+	default y
